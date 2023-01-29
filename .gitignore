@@ -3,6 +3,8 @@
 
 # Log file
 *.log
+*.idea
+out/production/Java_Object_Oriented_Programming
 
 # BlueJ files
 *.ctxt
