@@ -6,10 +6,10 @@ package source_code.labsheet_1;
  */
 public class Output5 {
     public static void main(String[] args) {
-        if (10) {       // Required type: boolean   Provided: int
-            System.out.println("Hello");
-        } else {
-            System.out.println("Hi");
-        }
+//        if (10) {       // Required type: boolean   Provided: int
+//            System.out.println("Hello");
+//        } else {
+//            System.out.println("Hi");
+//        }
     }
 }
