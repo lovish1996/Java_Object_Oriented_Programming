@@ -74,3 +74,16 @@
 - Changing values using reference will be reflected in caller method.
 - Object reference is passed by value and not by reference.
 - Changing reference variable to point to other object (same type) in called method is not reflected in caller method.
+
+#### Wrapper classes and primitive types
+
+- There are 8 primitive types: `byte, short, int, long, boolean, float, double, char`.
+- Primitive types are not implemented as Objects.
+- `System.out.println()` converts the input to String form.
+- `System.out.println(10)`, we know that `10` is primitive data type and `toString()` from `Object` class can be applied
+  only to objects, therefore converts it to `System.out.println(new Integer(10).toString())` i.e, primitive data type is
+  converted to its wrapper type.
+- Wrapper classes for primitive
+  types: `byte: Byte, short: Short, int: Integer, long: Long, boolean: Boolean, float: Float, double: Double, char: Character`
+- **Autoboxing** : converting primitive to its wrapper class.
+- **Auto unboxing** : converting wrapper class to its primitive data type.
