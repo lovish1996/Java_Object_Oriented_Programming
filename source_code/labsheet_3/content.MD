@@ -61,3 +61,16 @@
 - Cannot use `super` keyword, nothing like this for static blocks in parent class.
 - Testing is very tough with static blocks.
 
+#### Other important facts
+
+- Non-static fields cannot be referenced from a static context.
+- `final` variable should be initialized at the time of declaration.
+- We cannot reassign values to a final variable.
+
+#### Objects as parameters to methods
+
+- Two things are passed: state of object, and reference variable to some type pointing to that object.
+- Pass by reference w.r.t instance fields, i.e., fields can e manipulated using reference.
+- Changing values using reference will be reflected in caller method.
+- Object reference is passed by value and not by reference.
+- Changing reference variable to point to other object (same type) in called method is not reflected in caller method.
