@@ -41,4 +41,23 @@
 
 - Any code block without preceding `static` keyword i.e., `{}` is called Constructor block.
 - Executed when class is instantiated, if there are multiple constructors, it will be copied to each one of them.
-- 
+- Combines everything into one big  `constructor block`, and prepends to the content of each one of the constructors.
+
+#### Advantages of a static block
+
+- Initialize static variable using computations inside a static block, since static variables are initialized when JVM
+  loads the class.
+
+#### Disadvantages of a static block
+
+- Limitation (JVM), size of static block should not exceed 64K.
+- Cannot throw checked exceptions: Correct. You cannot throw checked exceptions inside a static block because they must
+  be handled or declared to be thrown. Since a static block does not have an associated method signature, it cannot
+  declare that it throws a checked exception. This means that any checked exceptions thrown inside a static block must
+  be handled within the block itself. If an exception cannot be handled, it will propagate to the calling code,
+  potentially causing the program to terminate.
+- Does not return anything since it is not a method, only used for one time setup operations when class is loaded.
+- Cannot use `this` keyword, no instance available.
+- Cannot use `super` keyword, nothing like this for static blocks in parent class.
+- Testing is very tough with static blocks.
+
