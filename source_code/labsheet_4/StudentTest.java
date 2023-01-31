@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Test {
+public class StudentTest {
     public static Student readStudent(Scanner scanner) throws IOException {
 //        System.out.println("Enter student details: ");
 //        System.out.println("Enter your first name: ");

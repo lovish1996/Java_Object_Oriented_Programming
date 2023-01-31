@@ -36,5 +36,9 @@ public class RetailStoreExample extends RetailStore {
         String stringFromDouble = Double.toString(retailStore.computePrice(1005));
         System.out.println("The price of the item computed using Double.toString() method is: " + stringFromDouble);
 
+        index = stringFromDouble.indexOf('.');
+
+        System.out.println("Prices from last two calls are same: " + stringFromDouble.substring(0, index).equals(stringFromSubstring));
+
     }
 }
