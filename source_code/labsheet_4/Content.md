@@ -10,7 +10,8 @@
 
 #### Strings, StringBuffer and StringTokenizer
 
-[RetailStoreExample.java]()
+[RetailStoreExample.java](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_4/RetailStoreExample.java) 
+
 **String**
 
 - `java.lang.String`, represents character strings, all string literals `"Abc"` instance of the class.
