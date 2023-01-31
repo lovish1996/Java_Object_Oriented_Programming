@@ -1,10 +1,17 @@
 package source_code.labsheet_4;
 
 public class RetailStore {
-    private int[] itemIds = {1001, 1002, 1003, 1004, 1005};
-    private double[] prices = {13.50, 18.00, 19.50, 25.50, 20.00};
+    private int[] itemIds;
+    private double[] prices;
+    private String[] itemNames;
 
-    private double computePrice(int itemId) {   // private because we are accessing it in the same class
+    public RetailStore() {
+        itemIds = new int[]{1001, 1002, 1003, 1004, 1005};
+        prices = new double[]{950.00, 750.00, 450.00, 350.00, 250.00};
+        itemNames = new String[]{"Yonex Tennis Racket-950", "Yonex Badminton Racket-750", "Silvers Badminton Racket-450", "Cosco Badminton Shuttle-450", "Cosco Tennis Racket-250"};
+    }
+
+    protected double computePrice(int itemId) {   // private because we are accessing it in the same class
         int n = itemIds.length;
 
         for (int i = 0; i < n; i++) {
@@ -13,6 +20,15 @@ public class RetailStore {
             }
         }
         return prices[itemId];      // in case we pass index instead of itemId
+    }
+
+    protected String fetchDescription(int itemId) {
+        for (int i = 0; i < prices.length; i++) {
+            if (itemIds[i] == itemId) {
+                return itemNames[i];
+            }
+        }
+        return itemNames[itemId];   // in case we pass index instead of itemId
     }
 
     public static void main(String[] args) {

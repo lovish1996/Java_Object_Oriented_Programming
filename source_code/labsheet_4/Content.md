@@ -10,6 +10,7 @@
 
 #### Strings, StringBuffer and StringTokenizer
 
+[RetailStoreExample.java]()
 **String**
 
 - `java.lang.String`, represents character strings, all string literals `"Abc"` instance of the class.
@@ -28,3 +29,9 @@
 - Token is essentially a substring of original string used for instantiation.
 - Legacy class, use is discouraged.
 
+**Class Design**
+
+- Child class can access `public` and `protected` members from parent class.
+- `protected` keyword is an `access modifier` in Java, and used to dictate that members can be accessed in same class
+  and any subclass. Used to implement `inheritance` and `encapsulation` in Java.
+- 
