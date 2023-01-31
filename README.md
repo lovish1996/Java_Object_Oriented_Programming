@@ -11,4 +11,4 @@
 - Lab 7: [Introduction to Collections](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/Lab%20Sheets/Labsheet_7.pdf)
 
 ##### Notes
-- [Static variables, methods, blocks, constructor blocks, objects as parameters, wrapper classes and primitive types](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_3/content.MD)
+- [Static variables, methods, blocks, constructor blocks, objects as parameters, wrapper classes and primitive types](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_3/Content.MD)
