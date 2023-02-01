@@ -10,7 +10,7 @@
 
 #### Strings, StringBuffer and StringTokenizer
 
-[RetailStoreExample.java](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_4/RetailStoreExample.java) 
+[RetailStoreExample.java](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_4/RetailStoreExample.java)
 
 **String**
 
@@ -35,4 +35,10 @@
 - Child class can access `public` and `protected` members from parent class.
 - `protected` keyword is an `access modifier` in Java, and used to dictate that members can be accessed in same class
   and any subclass. Used to implement `inheritance` and `encapsulation` in Java.
-- 
+
+**Vectors**
+
+- `java.util.Vector`, implements a growable array of objects, grow and shrink as required.
+- It contains components, which can be accessed using non-negative integer index.
+- It maintains the insertion order, rarely used in non-thread environment, as it is synchronized due to which it gives
+  poor performance in adding, deleting, searching, and updating of elements.

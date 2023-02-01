@@ -6,6 +6,11 @@ public class RetailStoreExample extends RetailStore {
     public static void main(String[] args) {
         int index;
         RetailStore retailStore = new RetailStore();
+        retailStore.addItem(new Item(1001, 950.00, "Yonex Tennis Racket-950"));
+        retailStore.addItem(new Item(1002, 750.00, "Yonex Badminton Racket-750"));
+        retailStore.addItem(new Item(1003, 450.00, "Silvers Badminton Racket-450"));
+        retailStore.addItem(new Item(1004, 350.00, "Cosco Badminton Shuttle-450"));
+        retailStore.addItem(new Item(1005, 250.00, "Cosco Tennis Racket-250"));
 
         String description = retailStore.fetchDescription(1005);
 

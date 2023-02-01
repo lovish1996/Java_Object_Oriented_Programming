@@ -7,24 +7,18 @@ import java.util.Scanner;
 
 public class StudentTest {
     public static Student readStudent(Scanner scanner) throws IOException {
-//        System.out.println("Enter student details: ");
-//        System.out.println("Enter your first name: ");
         String firstName = scanner.next();
         scanner.nextLine();
 
-//        System.out.println("Enter your middle name: ");
         String middleName = scanner.next();
         scanner.nextLine();
 
-//        System.out.println("Enter your last name: ");
         String lastName = scanner.next();
         scanner.nextLine();
 
-//        System.out.println("Enter the name format, 1 for ',' and 2 for ';': ");
         int nameFormat = scanner.nextInt();
         scanner.nextLine();
 
-//        System.out.println("Enter the age: ");
         int age = scanner.nextInt();
         scanner.nextLine();
 
@@ -49,9 +43,6 @@ public class StudentTest {
         for (int i = 0; i < 5; i++) {
             StudentList.addStudent(readStudent(scanner));
         }
-
-//        StudentList.printStudents();
-
 
         System.out.println("Students with age = 16:");
         for (Student student : Objects.requireNonNull(StudentList.getStudentsWithAge(16))) {
