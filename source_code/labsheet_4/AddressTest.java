@@ -1,13 +1,13 @@
 package source_code.labsheet_4;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class AddressTest {
-    public static Address readAddress(Scanner scanner) throws IOException {
+    public static Address readAddress(Scanner scanner) {
         String addressLineFirst = scanner.nextLine();
 
         String addressLineSecond = scanner.nextLine();
@@ -28,7 +28,7 @@ public class AddressTest {
         return new Address(addressString);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         File file = new File("/Users/lovisharora/Documents/Java_Object_Oriented_Programming/source_code/labsheet_4/address_records.txt");
         Scanner scanner = new Scanner(file);
 

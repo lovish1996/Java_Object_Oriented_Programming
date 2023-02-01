@@ -1,12 +1,12 @@
 package source_code.labsheet_4;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class StudentTest {
-    public static Student readStudent(Scanner scanner) throws IOException {
+    public static Student readStudent(Scanner scanner) {
         String firstName = scanner.next();
         scanner.nextLine();
 
@@ -34,7 +34,7 @@ public class StudentTest {
         return new Student(name, age);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
 
         File file = new File("/Users/lovisharora/Documents/Java_Object_Oriented_Programming/source_code/labsheet_4/student_records.txt");
 
