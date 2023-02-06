@@ -121,3 +121,15 @@
   defines one. Since constructors are not methods, they do not have a return type, and therefore cannot be overridden.
   Instead, a subclass can call its superclass constructor to reuse its behavior and initialize the object's state in a
   consistent way).
+
+#### Abstract Class
+
+- `Abstract method:` method with only signature (name, argument list, and return type) without implementation (method
+  body).
+- Use `abstract` keyword to declare abstract method.
+- `Abstract class:` class with one or more abstract methods.
+- `Abstract class:` declared with class-level `abstract` modifier.
+- An `abstract class` is a special type of class that `cannot be instantiated` on its own. It serves as a blueprint for
+  other classes, allowing them to inherit its properties and methods, and it can contain abstract methods which are left
+  to be defined by subclasses. Because an abstract class is only meant to be subclassed and not instantiated directly,
+  attempting to create an instance of an abstract class will result in a compile-time error.
