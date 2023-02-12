@@ -14,4 +14,4 @@
 - [Static variables, methods, blocks, constructor blocks, objects as parameters, wrapper classes and primitive types](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_3/Content.md)
 - [Single Dimensional Arrays, String, StringBuffer, StringTokenizer, Two Dimensional Array, Vectors](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_4/Content.md)
 - [Inheritance, Polymorphism, Abstract Class](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_5/Content.md)
-- [Interfaces, Implementing multiple interfaces, Nested classes](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_6/Content.md)
+- [Interfaces, Implementing multiple interfaces, Nested classes, Inner class, Instantiating an inner class, Method-local inner class](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_6/Content.md)
