@@ -25,7 +25,15 @@
   to inherit conflicting properties.
 - Java indirectly supports `multiple inheritance` via implementing `multiple interfaces`.
 - `public class Circle extends Shape implements Movable, Displayable {}`
-- Syntax: `[pubic | protected | package] interface interfaceName [extends parentInterface1, parentInterface2, ...] {}`
+- Syntax:
+
+```
+[pubic | protected | package] interface interfaceName 
+[extends parentInterface1, parentInterface2, ...] {
+    // abstract methods signatures
+}
+```
+
 - Constants in interface: `static final ...;`
 - All methods in an interface is by default `public abstract`, cannot use other access
   modifiers such as `private, protected, default (package-private), static, final`.
@@ -36,3 +44,70 @@
 - `~` in class diagram signifies `package-private` access.
 
 #### Nested Classes
+
+- Classes declared inside body of another class.
+- Use Case:
+    - Grouping of logical classes: if any `class B` is used by only one specific `class A`, we should nest `class B`
+      inside `class A`.
+    - Encapsulation: By writing nested classes, they are available only to enclosing classes, and not to the outside
+      world.
+    - Maintainability and re-usability of code: Encapsulation brings the beauty of maintainability of code. In our
+      earlier example, we can write another class B which is visible to the entire world. This has nothing to do with
+      the one already present inside class A.
+- Nested class is of two kinds:
+    - Inner class
+    - Static nested class
+- Inner class is of three types:
+    - Inner class (member class)
+    - Method-local inner class
+    - Anonymous inner class
+- Nested class behave just like any other member of its enclosing class.
+- Nested class has access to all the members of its enclosing class.
+
+#### Inner Class
+
+- `Inner class` is defined as:
+    - declared inside the body of another class (member class)
+    - not declared inside method of another class
+    - not a static nested class
+    - not an anonymous inner class
+
+```
+class Outer{
+ 
+    class Inner{
+        // implementation
+    }
+    
+}
+```
+
+- After compilation, we get `Outer.class` and `Outer$Inner.class`, inner class is tied to its inner class.
+- An inner class cannot have any static code including `public static void main(String[] args){}`
+- Only classes with `public static void main(String[] args){}` can be called using `java className` command.
+- Inner class being a member of the outer class has access to all the members (private as well) of the outer enclosing
+  class.
+- Inner class with no `public static void main(String[] args){}` can not be called using `java Outer$Inner`.
+
+#### Instantiating an inner class
+
+- We need an instance of an outer class since inner class can not stand on its own.
+- There are two ways:
+    - Within its outer class
+    - Outside its outer class
+
+```
+class Outer{
+  Inner inner = new Inner();
+  class Inner{
+  
+  }
+}
+```
+
+#### Method local inner classes
+
+- Defined within a method of the enclosing class.
+- For using inner class, it must be initialized inside the method after class definition code in the same method.
+- A method-local inner class cannot use variables/parameters from the method unless they are final.
+- We can only apply `abstract` or `final` to method-local inner class. These two cannot be clubbed together though.

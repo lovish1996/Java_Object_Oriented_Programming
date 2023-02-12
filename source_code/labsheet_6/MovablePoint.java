@@ -1,6 +1,8 @@
 package source_code.labsheet_6;
 
-public class MovablePoint implements Movable, Comparable<MovablePoint> {
+import java.util.Comparator;
+
+public class MovablePoint implements Movable, Comparable<MovablePoint>, Comparator<MovablePoint> {
     int x;
     int y;
     int xSpeed;
@@ -51,5 +53,12 @@ public class MovablePoint implements Movable, Comparable<MovablePoint> {
         if (this.x - movablePoint.x != 0)
             return this.x - movablePoint.x;
         return this.y - movablePoint.y;
+    }
+
+    @Override
+    public int compare(MovablePoint movablePointFirst, MovablePoint movablePointSecond) {
+        if (movablePointFirst.x - movablePointSecond.x != 0)
+            return movablePointFirst.x - movablePointSecond.x;
+        return movablePointFirst.y - movablePointSecond.y;
     }
 }
