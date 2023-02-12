@@ -105,7 +105,7 @@ class Outer{
 }
 ```
 
-#### Method local inner classes
+#### Method-local inner classes
 
 - Defined within a method of the enclosing class.
 - For using inner class, it must be initialized inside the method after class definition code in the same method.
