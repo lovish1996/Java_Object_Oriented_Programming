@@ -15,3 +15,4 @@
 - [Single Dimensional Arrays, String, StringBuffer, StringTokenizer, Two Dimensional Array, Vectors](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_4/Content.md)
 - [Inheritance, Polymorphism, Abstract Class](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_5/Content.md)
 - [Interfaces, Implementing multiple interfaces, Nested classes, Inner class, Instantiating an inner class, Method-local inner class](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_6/Content.md)
+- [Anonymous Inner Classes, List Interface, ArrayList, Iterator, ListIterator, Linked List, Iterator for a Linked List, Doubly Linked List](https://github.com/lovish1996/Java_Object_Oriented_Programming/blob/main/source_code/labsheet_7/Content.md)
