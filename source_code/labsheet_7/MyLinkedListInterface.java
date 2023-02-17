@@ -29,4 +29,8 @@ public interface MyLinkedListInterface {
 
     public int checkElementIndex(int index);
 
+    public void reverseLinkedList();
+
+    public void rotateCounterClockwise(int k);
+
 }

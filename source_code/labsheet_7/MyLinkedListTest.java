@@ -66,5 +66,18 @@ public class MyLinkedListTest {
         System.out.println("Testing getSize()");
         System.out.println(myLinkedList.getSize());
         System.out.println(myLinkedList);
+
+        myLinkedList.addEnding("Fifth Node");
+        myLinkedList.addEnding("Sixth Node");
+        myLinkedList.addEnding("Seventh Node");
+        System.out.println(myLinkedList);
+        myLinkedList.reverseLinkedList();
+        System.out.println("Reverse the given linked list");
+        System.out.println(myLinkedList);
+
+        System.out.println("Rotate linked list counter clockwise");
+        myLinkedList.rotateCounterClockwise(4);
+        System.out.println(myLinkedList);
+
     }
 }

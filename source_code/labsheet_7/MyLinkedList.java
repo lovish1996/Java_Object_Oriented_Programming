@@ -1,5 +1,7 @@
 package source_code.labsheet_7;
 
+import java.util.Iterator;
+
 public class MyLinkedList implements MyLinkedListInterface {
     private Node head;
     private int size;
@@ -24,6 +26,73 @@ public class MyLinkedList implements MyLinkedListInterface {
                     "data=" + data +
                     ", next=" + next +
                     '}';
+        }
+    }
+
+    class SinglyLinkedListIterator implements Iterator {
+        private Node current, lastAccessed;
+        private int index;
+
+        public SinglyLinkedListIterator() {
+            this.current = head;
+            this.lastAccessed = null;
+            this.index = 0;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return index < size;
+        }
+
+        public int nextIndex() {
+            return index;
+        }
+
+        @Override
+        public Node next() {
+            if (!hasNext()) {
+                return null;
+            }
+            lastAccessed = current;
+            Node node = current;
+            current = current.next;
+            index++;
+            return node;
+        }
+
+        public void addObject(Object object) {
+            Node x = lastAccessed;
+            Node y = new Node(object, current);
+            x.next = y;
+            size++;
+            index++;
+            lastAccessed = null;
+        }
+
+        @Override
+        public void remove() {
+            if (lastAccessed == null) {
+                System.out.println("No item to delete");
+                return;
+            }
+            Node x = lastAccessed;
+            Node y = current.next;
+            x.next = y;
+            size--;
+            if (current == lastAccessed) {
+                current = y;
+            } else {
+                index--;
+            }
+            lastAccessed = null;
+        }
+
+        public void set(Object object) {
+            if (lastAccessed == null) {
+                System.out.println("No item to set");
+                return;
+            }
+            lastAccessed.data = object;
         }
     }
 
@@ -200,19 +269,55 @@ public class MyLinkedList implements MyLinkedListInterface {
     }
 
     @Override
+    public void reverseLinkedList() {
+        Node current = head;
+        Node previous = null;
+        Node next;
+
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        this.head = previous;
+    }
+
+    @Override
+    public void rotateCounterClockwise(int k) {
+        Node temp = this.head;
+        Node oldHead = this.head;
+        Node newHead;
+        while (k > 1) {
+            temp = temp.next;
+            k -= 1;
+        }
+        newHead = temp.next;
+        temp.next = null;
+        temp = newHead;
+        while (temp.next != null)
+            temp = temp.next;
+        temp.next = oldHead;
+        this.head = newHead;
+    }
+
+    @Override
     public String toString() {
         if (size == 0) {
             return "Empty Linked List.";
         }
         StringBuilder linkedList = new StringBuilder();
-        linkedList.append("Size of linked list: " + getSize() + "\n" + "Nodes:\n");
+        linkedList.append("Size of linked list: ").append(getSize()).append("\nNodes:\n");
         Node temp = head;
 
         while (temp != null) {
-            linkedList.append("\tData: " + temp.data + "\n");
+            linkedList.append("\tData: ").append(temp.data).append("\n");
             temp = temp.next;
         }
         linkedList.append("\n");
         return linkedList.toString();
     }
+
+
 }

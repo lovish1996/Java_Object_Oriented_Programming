@@ -79,3 +79,4 @@ array.size();
   - Delete at beginning: `O(1)`
   - Delete at end: `O(1)`
   - Search for an element: `O(n)`
+- An Iterator can be made for the Linked List as an inner class for traversing the elements as necessary.
